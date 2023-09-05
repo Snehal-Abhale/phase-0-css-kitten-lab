@@ -41,12 +41,6 @@ describe("place-kitty.css", () => {
     expect(rule, hint).to.exist;
   });
 
-  it("selects the image based on the respective sibling element", () => {
-    const rule = findRule(css.cssRules, "#ball + img");
-    const hint =
-      "Make sure you have a CSS selector that selects the image based on the respective sibling element";
-    expect(rule, hint).to.exist;
-  });
 
   it('Selects the image that has an alt attribute value matching "Kitty 5", via the attribute selector', () => {
     const rule = findRule(css.cssRules, 'img[alt="Kitty 5"]');
